@@ -1,0 +1,38 @@
+terminal-
+	docker ps
+
+ctrl+l
+
+docker exec -it postgres bash
+
+psql -U amigoscode
+
+\l
+
+CREATE DATABASE customer;
+
+\l
+
+ctrl+d
+
+\c customer
+
+ \dt
+ \d
+
+select * from customer;
+
+ INSERT INTO customer (age, id, email, name) 
+VALUES (24, nextval('customer_id_sequence'), 'alex@gmail.com', 'Alex');
+
+INSERT INTO customer (age, id, email, name) 
+VALUES (26, nextval('customer_id_sequence'), 'Rush@gmail.com', 'Rush');
+
+INSERT INTO customer (age, id, email, name) 
+VALUES (20, nextval('customer_id_sequence'), 'Alice@gmail.com', 'Alice');
+
+
+localhost:8080/api/v1/customers  postman
+
+ select * from customer;
+
